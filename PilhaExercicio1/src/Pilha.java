@@ -24,8 +24,13 @@ public class Pilha {
 
             if (topopilha == arquivo.length - 1)
             {
-
-                System.out.print("\n Pilha cheia");
+                System.out.print("\n Pilha cheia");                               
+                cheio = arquivo.clone();
+                arquivo = (String[]) new String[(topopilha+1)*2];
+                for(int x = 0; x < cheio.length ;x++)
+                {
+                    arquivo[x] = cheio[x];
+                }  
                 
             }
 
